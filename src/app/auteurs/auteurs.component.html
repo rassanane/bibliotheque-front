@@ -1,0 +1,71 @@
+<div class="container-auteurs" style="height: 50px;">
+</div>
+<div class="container-auteurs">
+    <table width="600px" cellspacing="10px">
+
+        <tr>
+          <td width="200px"><span class="textgras">Nom</span></td>
+          <td width="200px"><span class="textgras">Prénom</span></td>
+          <td width="100px"></td>
+          <td width="100px"></td>
+        </tr>
+
+        <tr *ngFor="let entry of listAuteurs">
+            <td width="200px"><span class="text">{{ entry.nom }}</span></td>
+            <td width="200px"><span class="text">{{ entry.prenom }}</span></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="affichFrmModif(entry.id)" class="lientitre">Modifier>></a></span></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="supprimer(entry.id)" class="lientitre">Supprimer>></a></span></td>
+        </tr>
+
+        <tr>
+            <td width="200px" height="10px"></td>
+            <td width="200px"></td>
+            <td width="100px"></td>
+            <td width="100px"></td>
+        </tr>
+        <tr>
+            <td width="200px"></td>
+            <td width="200px"></td>
+            <td width="100px"></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="affichFrmAjout()" class="lientitre">Ajouter>></a></span></td>
+            </tr>
+            
+    </table>
+</div>
+<ng-container *ngIf="affichAjout">
+    <div class="container-auteurs" ng-hide="myVar">
+        <form name="ajoutForm" #ajoutForm="ngForm" (ngSubmit)="ajouter()">
+        <table width="600px" cellspacing="10px">
+            <tr>
+            <td width="200px"><span class="text"><input type="text" id="nom" name="nom" [(ngModel)]="ajoutFormData.nom" required></span></td>
+            <td width="200px"><span class="text"><input type="text" id="prenom" name="prenom" [(ngModel)]="ajoutFormData.prenom" required></span></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="cachFrmAjout()" class="lientitre">Annuler>></a></span></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="ajouter()" class="lientitre">Ajouter>></a></span></td>
+            </tr>
+        </table>
+            <!--<button type="submit" [disabled]="!ajoutForm?.valid">Login</button>-->
+        </form>
+    </div>
+</ng-container>
+<ng-container *ngIf="affichModif">
+    <div class="container-auteurs">
+        <form name="modifForm" #modifForm="ngForm" (ngSubmit)="modifier()">
+        <input type="hidden" id="id" name="id" [(ngModel)]="modifFormData.id">
+        <table width="600px" cellspacing="10px">
+            <tr>
+            <td width="200px"><span class="text"><input type="text" id="nom" name="nom" [(ngModel)]="modifFormData.nom"></span></td>
+            <td width="200px"><span class="text"><input type="text" id="prenom" name="prenom" [(ngModel)]="modifFormData.prenom"></span></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="cachFrmModif()"  class="lientitre">Annuler>></a></span></td>
+            <td width="100px"><span class="lienaction"><a href="javascript:void(0)" (click)="modifier()" class="lientitre">Modifier>></a></span></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</ng-container>
+<div class="container-auteurs" style="height: 40px;">
+</div>
+<div class="container-auteurs" style="text-align: right;">
+    <a routerLink="" class="lienaction">Accueil>></a>
+</div>
+<div class="container-auteurs" style="height: 40px;">
+</div>

@@ -1,0 +1,47 @@
+.container {
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 800px;
+    height: 300px;
+    /*border: 1px black solid;*/
+}
+
+.centered-element{
+	margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: grey;*/
+    padding: 50px;
+    width: 500px;
+}
+
+.lientitre {
+  font-size: 30px;
+  font-family: 'Arial';
+  font-weight: bold;
+  text-align: center;
+}
+
+ /* unvisited link */
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  text-decoration: none;
+} 

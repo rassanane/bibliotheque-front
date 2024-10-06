@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+.container-auteurs {
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 700px;
+    border: 0px black solid;
+}
+
+.lienaction {
+    font-size: 12px;
+    font-family: 'Arial';
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .textgras {
+    font-size: 14px;
+    font-family: 'Arial';
+    font-weight: bold;
+    text-align: center;
+    color: blue;
+  }
+
+  .titre {
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: bold;
+    text-align: center;
+    color: blue;
+  }
+
+  .text {
+    font-size: 12px;
+    font-family: 'Arial';
+    font-weight: normal;
+    text-align: center;
+    color: blue;
+  }
+
+  a:link {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: green;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: blue;
+    text-decoration: none;
+  } 
+  
+  input {
+    font-size: 12px;
+    font-family: inherit;
+    width: 95%;
+    color: blue;
+  }
+
+
