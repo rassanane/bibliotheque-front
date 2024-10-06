@@ -1,2 +1,2 @@
 # bibliotheque-front
-Un simple exemple Angular pour la gestion d'une bibliothèque
+Un simple exemple Angular pour la gestion d'une bibliothèque (non terminé)
